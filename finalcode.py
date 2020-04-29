@@ -22,7 +22,7 @@ dados = req.json()
 #adicionando a cifra decifrada no dicionário
 dados["decifrado"] = cifraDeCesar(dados["cifrado"], dados["numero_casas"])
 
-#calculando sh1 e adicionando no dicionário
+#calculando SHA1 e adicionando no dicionário
 sh1_calculado = hashlib.sha1(dados["decifrado"].encode())
 dados["resumo_criptografico"] = sh1_calculado.hexdigest()
 
